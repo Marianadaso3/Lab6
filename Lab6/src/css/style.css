@@ -1,0 +1,34 @@
+body {
+  padding: 50px;
+}
+
+img {
+  border-radius: 20px;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.black {
+  background-color: #4e4e4e;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.MediumAquamarine {
+  background-color: MediumAquamarine;
+}
+
+.lightgreen {
+  background-color: lightgreen;
+}
+
+.container-iframe {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
