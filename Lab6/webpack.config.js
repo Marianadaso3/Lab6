@@ -16,7 +16,7 @@ module.exports = {
   },
   output: {
     filename: "[name].[hash].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "bundle_con_babel"),
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -61,6 +61,20 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg|xml|ogg|wav|mp3|jfif)$/i,
         use: "file-loader",
+      },
+      {
+       test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use:  {
+          loader: 'babel-loader',
+          options:  {
+            presets: ['@babel/preset-env'],
+            //Agregar plugins adicionales 
+            plugins: ["@babel/plugin-transform-runtime"],
+            plugins: ["@babel/plugin-proposal-object-rest-spread"]
+            
+          }
+        }  
       },
     ],
   },
