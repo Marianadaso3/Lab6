@@ -2,6 +2,13 @@ import 'animate.css';
 import "bootstrap/dist/css/bootstrap.css";
 import "./css/style.css";
 
+const title = 'Pagina2'
+description = { description : 'Bienvenido a la pagina dos; esta es prueba del plugin '}
+
+let object = {title, ... description}
+title.innerHTML= object
+
+
 
 const titulo = document.getElementById("titulo");
 titulo.innerHTML =
